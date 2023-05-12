@@ -10,7 +10,7 @@ Security solutions for Golang project, includes:
 
 ### Setup instruction
 
-Base setup, see [CCGO Instruction](https://github.com/crosect/cc-go/-/blob/develop/README.md)
+Base setup, see [CCGO Instruction](https://github.com/Crosect/cc-go/blob/main/README.md)
 
 Both `go get` and `go mod` are supported.
 
