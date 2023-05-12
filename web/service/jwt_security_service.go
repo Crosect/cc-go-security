@@ -9,14 +9,14 @@ import (
 	"net/http"
 )
 
-type JwtMobileService struct {
+type JwtSecurityServiceImpl struct {
 }
 
-func NewJwtMobileService() *JwtMobileService {
-	return &JwtMobileService{}
+func NewJwtSecurityService() JwtService {
+	return &JwtSecurityServiceImpl{}
 }
 
-func (j JwtMobileService) GetAuthentication(token *jwt.Token, request *http.Request) (authen.Authentication, error) {
+func (j JwtSecurityServiceImpl) GetAuthentication(token *jwt.Token, request *http.Request) (authen.Authentication, error) {
 	mapClaims := token.Claims.(jwt.MapClaims)
 	userId := mapClaims["sub"].(string)
 	if len(userId) == 0 {
@@ -27,6 +27,6 @@ func (j JwtMobileService) GetAuthentication(token *jwt.Token, request *http.Requ
 	return authen.NewJwtTokenAuthentication(userDetails, authorities, mapClaims), nil
 }
 
-func (j JwtMobileService) role() string {
-	return "ROLE_MOBILE_APP"
+func (j JwtSecurityServiceImpl) role() string {
+	return "ROLE_SECURITY_SERVICE"
 }

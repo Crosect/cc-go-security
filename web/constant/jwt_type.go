@@ -1,7 +1,7 @@
 package constant
 
 const (
-	JwtTokenMobile = "JWT_TOKEN_MOBILE"
+	JwtToken = "JWT_TOKEN"
 
 	// JwtTokenMerchant TODO will do it later
 	JwtTokenMerchant = "JWT_TOKEN_MERCHANT"

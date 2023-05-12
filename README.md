@@ -87,12 +87,12 @@ app:
                 - /swagger/*
 
             protectedUrls: # Define urls with required roles can be accessed with authentication
-                - { urlPattern: "/v1/api-with-jwt-auth", method: POST, roles: [ "MOBILE_APP" ], unauthorizedWwwAuthenticateHeaders: [ "Bearer" ] }
+                - { urlPattern: "/v1/api-with-jwt-auth", method: POST, roles: [ "SECURITY_SERVICE" ], unauthorizedWwwAuthenticateHeaders: [ "Bearer" ] }
                 - { urlPattern: "/v1/api-with-basic-auth", method: POST, roles: [ "INTERNAL_SERVICE" ], unauthorizedWwwAuthenticateHeaders: [ "Basic" ] }
 
             # Required when using JwtAuthFilterOpt()
             jwt:
-                type: JWT_TOKEN_MOBILE # Currently, we support JWT_TOKEN_MOBILE
+                type: JWT_TOKEN # Currently, we support JWT_TOKEN
                 publicKey: | # Public Key to verify JWT token
                     -----BEGIN PUBLIC KEY-----
                     MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgE...

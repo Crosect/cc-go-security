@@ -45,8 +45,8 @@ func JwtAuthSecurityFilter(props *config.JwtSecurityProperties) (AuthenticationF
 
 func getJwtService(props *config.JwtSecurityProperties) (service.JwtService, error) {
 	switch props.Type {
-	case constant.JwtTokenMobile:
-		return service.NewJwtMobileService(), nil
+	case constant.JwtToken:
+		return service.NewJwtSecurityService(), nil
 	default:
 		return nil, fmt.Errorf("unsupported jwt type: [%s]", props.Type)
 	}

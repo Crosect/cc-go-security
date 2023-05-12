@@ -5,7 +5,7 @@ import "strings"
 type JwtSecurityProperties struct {
 	PublicKey string
 	Algorithm string `default:"RS256"`
-	Type      string `default:"JWT_TOKEN_MOBILE"`
+	Type      string `default:"JWT_TOKEN"`
 }
 
 func (j JwtSecurityProperties) IsAlgRs() bool {
