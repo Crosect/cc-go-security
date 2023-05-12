@@ -61,8 +61,6 @@ func main() {
 		//	      LSb3U5FtkHjBaULxK9Wk2btXvbSZ4HK0cdCf/FHnKpuPoguWOsHrQcVqxzN5XaR1
 		//	      zBSVNXIuxry3AXWq8DDJ/GGXdsxcr0xZ2NGn3GAj0op8cvENes88Wg==
 		//	      -----END RSA PRIVATE KEY-----
-		//
-		// Eg: https://github.com/crosect/cc-go-sample/-/tree/develop/src/public/testing/create_order_controller_test.go
 		testUtil.JwtTestUtilOpt(),
 	}
 }
